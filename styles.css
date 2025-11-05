@@ -1,0 +1,43 @@
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+
+html {
+  font-size: 62.5%;
+  background-color: aqua;
+}
+
+body {
+  box-sizing: border-box;
+  font-size: 1.6rem;
+  min-height: 100vh; /* full viewport height */
+  display: flex;
+  flex-direction: column;
+}
+
+header {
+  width: 100%;
+  text-align: center;
+  padding: 2rem 1rem;
+}
+
+header h1 {
+  margin: 0;
+  font-size: 2.4rem;
+}
+
+.main-content {
+  /* center the rest of the page in the remaining space */
+  flex: 1 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 2rem;
+  gap: 1rem;
+}
