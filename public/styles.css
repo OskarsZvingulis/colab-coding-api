@@ -6,9 +6,27 @@
   box-sizing: inherit;
 }
 
+#myVideo {
+  position: fixed;
+  right: 0;
+  bottom: 0;
+  min-width: 100%;
+  min-height: 100%;
+}
+
+.video-container {
+			position: relative;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			height: 100vh;
+			overflow: hidden;
+}
+
 html {
   font-size: 62.5%;
   background-color: aqua;
+  /*mix-blend-mode: difference;*/
 }
 
 body {
@@ -17,17 +35,40 @@ body {
   min-height: 100vh; /* full viewport height */
   display: flex;
   flex-direction: column;
+  background: inherit;
+  background-clip: text;
+  color: transparent;
+  filter: invert(1);
 }
+
 
 header {
   width: 100%;
   text-align: center;
+  size: 5rem;
   padding: 2rem 1rem;
+  color: green
 }
 
 header h1 {
   margin: 0;
   font-size: 2.4rem;
+  color: green
+}
+
+.hero-video {
+  position: fixed;
+  inset: 0;
+  z-index: -1;
+  overflow: hidden;
+  pointer-events: none;
+}
+
+#myVideo {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  filter: brightness(0.55);
 }
 
 .main-content {
@@ -40,4 +81,15 @@ header h1 {
   text-align: center;
   padding: 2rem;
   gap: 1rem;
+}
+
+.christmas-note {
+  font-size: 1.2rem;
+  margin-top: 0.5rem;
+  animation: twinkle 1.5s infinite;
+}
+
+@keyframes twinkle {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.6; }
 }
